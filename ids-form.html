@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="ids-form">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `ids-form`
+     * creando form
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class IdsForm extends Polymer.Element {
+      static get is() { return 'ids-form'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'ids-form'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(IdsForm.is, IdsForm);
+  </script>
+</dom-module>

@@ -1,4 +1,5 @@
 <link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../proyecto-polymer/ids-input.html">
 
 <dom-module id="ids-form">
   <template>
@@ -7,8 +8,18 @@
         display: block;
       }
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <form action="">
+      <ids-input value="{{valueName}}" text-label="Nombre" type-input="text" name-input="name"></ids-input>
+      <ids-input value="{{valueEmail}}" text-label="Email" type-input="email" name-input="email"></ids-input>
+      <ids-input value="{{valueEmailWork}}" text-label="Email Trabajo" type-input="email" name-input="email-work"></ids-input>
+      <ids-input value="{{valuePhone}}" text-label="Telefono" type-input="tel" name-input="phone"></ids-input>
+    </form>
+    <p>Nombre: [[valueName]]</p>
+    <p>Correo: [[valueEmail]]</p>
+    <p>Correo Trabajo: [[valueEmailWork]]</p>
+    <p>Telefono: [[valuePhone]]</p>
   </template>
+
 
   <script>
     /**
@@ -23,10 +34,23 @@
       static get is() { return 'ids-form'; }
       static get properties() {
         return {
-          prop1: {
-            type: String,
-            value: 'ids-form'
-          }
+          valueName:{
+            type: String
+          },
+            valueEmail:{
+              type: String  
+            },
+            valueEmailWork:{
+              type: String  
+            },
+            valuePhone:{
+              type: String  
+            },
+            nameInputPadre:{
+              type:String,
+              value: 'Nombre Padre'
+            }
+
         };
       }
     }

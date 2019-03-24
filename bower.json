@@ -4,7 +4,9 @@
   "main": "ids-form.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0",
-    "proyecto-polymer": "https://github.com/luisantiago10/proyecto-polymer.git"
+    "proyecto-polymer": "https://github.com/luisantiago10/proyecto-polymer.git",
+    "paper-input": "@polymer/paper-input#^2.0.0",
+    "paper-button": "@polymer/paper-button#^2.0.0"
   },
   "devDependencies": {
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",

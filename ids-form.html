@@ -1,6 +1,8 @@
 <link rel="import" href="../polymer/polymer-element.html">
 <link rel="import" href="../proyecto-polymer/ids-input.html">
-
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../paper-styles/paper-styles.html">
 <dom-module id="ids-form">
   <template>
     <style>
@@ -13,11 +15,20 @@
       <ids-input value="{{valueEmail}}" text-label="Email" type-input="email" name-input="email"></ids-input>
       <ids-input value="{{valueEmailWork}}" text-label="Email Trabajo" type-input="email" name-input="email-work"></ids-input>
       <ids-input value="{{valuePhone}}" text-label="Telefono" type-input="tel" name-input="phone"></ids-input>
+      <paper-input 
+      type="email"
+      always-float-label 
+      label="Ingresa tu email" 
+      value="{{email}}" 
+      auto-validate 
+      pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" >
+      </paper-input>
     </form>
     <p>Nombre: [[valueName]]</p>
     <p>Correo: [[valueEmail]]</p>
     <p>Correo Trabajo: [[valueEmailWork]]</p>
     <p>Telefono: [[valuePhone]]</p>
+    <p>email: [[email]]</p>
   </template>
 
 
